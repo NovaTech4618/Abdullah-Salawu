@@ -1,26 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Problem and Fix Table</title>
+    <meta charset="utf-8">
+    <title>HTML Problem and Fix Table</title>
 </head>
+
 <body>
-  <h1>Problem and Fix Table</h1>
-  <table border="1">
-    <thead><tr><th>Problem</th><th>Location in broken.html</th><th>Fix in fixed.html</th><th>Why the fix matters</th></tr></thead>
-    <tbody>
-      <tr><td>Missing document language</td><td>Opening html element</td><td>Added lang="en"</td><td>Helps assistive technology identify the page language.</td></tr>
-      <tr><td>Missing title</td><td>head element</td><td>Added a descriptive title</td><td>Gives the browser tab a useful name.</td></tr>
-      <tr><td>Missing closing tags</td><td>h1, p and first li elements</td><td>Closed the elements properly</td><td>Makes the page structure clear and avoids parsing problems.</td></tr>
-      <tr><td>Incorrect heading hierarchy</td><td>h1 followed by h3; later h5</td><td>Used h1 for the page title and h2 for sections</td><td>Makes the content easier to navigate.</td></tr>
-      <tr><td>Duplicate IDs</td><td>Two li elements use id="task"</td><td>Removed IDs that were not needed</td><td>IDs should be unique within a page.</td></tr>
-      <tr><td>Meaningful image has no alt text</td><td>img element</td><td>Added descriptive alt text and a figure caption</td><td>Gives people who cannot see the image a text description.</td></tr>
-      <tr><td>Broken relative links</td><td>missing-study-tips.html and pages/weekly-plan.html</td><td>Linked to study-tips.html and weekly-plan.html, which are included in the project</td><td>Visitors can open the pages instead of reaching missing files.</td></tr>
-      <tr><td>Incorrect form-label associations</td><td>Name label has no for; study-time points to a missing ID</td><td>Added matching for and id values</td><td>Associates each label with the correct input.</td></tr>
-      <tr><td>Missing mobile viewport metadata</td><td>head element</td><td>Added viewport meta element</td><td>Helps the page display at the device's width on phones.</td></tr>
-    </tbody>
-  </table>
-  <p><a href="fixed.html">Back to the corrected page</a></p>
+    <h1>Malformed HTML: Problem and Fix Table</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Problem</th>
+                <th>Location in broken.html</th>
+                <th>Fix in fixed.html</th>
+                <th>Why it matters</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Missing document language</td>
+                <td>Opening html element</td>
+                <td>Added lang="en"</td>
+                <td>Helps screen readers and other tools identify the page language.</td>
+            </tr>
+            <tr>
+                <td>Missing title</td>
+                <td>head</td>
+                <td>Added a descriptive title element</td>
+                <td>Gives the page a useful browser-tab title and helps navigation and search.</td>
+            </tr>
+            <tr>
+                <td>Missing viewport metadata</td>
+                <td>head</td>
+                <td>Added viewport meta element</td>
+                <td>Helps the page use the device width on mobile screens.</td>
+            </tr>
+            <tr>
+                <td>Missing closing tags</td>
+                <td>h1, p, li and other elements in body</td>
+                <td>Closed each element explicitly</td>
+                <td>Prevents unintended parsing and makes the document easier to maintain.</td>
+            </tr>
+            <tr>
+                <td>Incorrect heading hierarchy</td>
+                <td>h1 followed by h3; later h4</td>
+                <td>Used h1 for the page title and h2 for section headings</td>
+                <td>Creates a meaningful, navigable outline for readers and assistive technology.</td>
+            </tr>
+            <tr>
+                <td>Duplicate IDs</td>
+                <td>Two elements use id="item"</td>
+                <td>Removed unnecessary duplicate IDs</td>
+                <td>IDs must be unique within a document for labels, scripts and fragment links to target reliably.</td>
+            </tr>
+            <tr>
+                <td>Meaningful image lacks alt text</td>
+                <td>img element</td>
+                <td>Added descriptive alt text and a figure caption</td>
+                <td>Provides an equivalent description for people who cannot see the image.</td>
+            </tr>
+            <tr>
+                <td>Broken relative links</td>
+                <td>tips/cooking.html and ingredients.html links</td>
+                <td>Replaced with a real external recipe link</td>
+                <td>Avoids sending users to missing pages.</td>
+            </tr>
+            <tr>
+                <td>Incorrect form-label association</td>
+                <td>Name label has no for; email label points to a nonexistent id</td>
+                <td>Added matching for/id pairs for both inputs</td>
+                <td>Associates labels with controls, improving accessibility and click/tap targets.</td>
+            </tr>
+            <tr>
+                <td>Missing image resource in project</td>
+                <td>jollof-rice.jpg referenced but not supplied</td>
+                <td>Changed to an external image URL and supplied alt text</td>
+                <td>Avoids a broken local image reference when the remote image is available.</td>
+            </tr>
+            <tr>
+                <td>Incomplete description list</td>
+                <td>Only one cooking term</td>
+                <td>Added three terms with dt/dd pairs</td>
+                <td>Uses a description list to associate each term with its definition.</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
